@@ -67,7 +67,18 @@ class MyList:
 		return False
 	
 	def getAt(self, index):
-		return None
+		if index < 0:
+			return None
+		elif self.head is None:
+			return None
+		
+		current = self.head
+		for i in range(index):
+			if current.next is None:
+				return None
+			current = current.next
+		else:
+			return current.value
 	
 	def get(self, value):
 		return None
