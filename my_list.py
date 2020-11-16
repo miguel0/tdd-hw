@@ -1,11 +1,9 @@
-import unittest
-
-class Node:
+class MyNode:
 	def __init__(self, value):
 		self.value = value
 		self.next = None
 
-class List:
+class MyList:
 	def __init__(self, *values):
 		self.head = None
 	
@@ -29,6 +27,3 @@ class List:
 	
 	def remove(self, index):
 		return None
-
-if __name__ == '__main__':
-	unittest.main()
