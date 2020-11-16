@@ -13,7 +13,9 @@ class TestMyList(unittest.TestCase):
 		self.assertEqual(list.size(), 0)
 	
 	def test_add(self):
-		return
+		list = MyList(1, 2, 3, 4)
+		list.add(5, 6, 7, 8)
+		self.assertEqual(list.size(), 8)
 	
 	def test_exists(self):
 		return
