@@ -1,9 +1,11 @@
 class MyNode:
+
 	def __init__(self, value):
 		self.value = value
 		self.next = None
 
 class MyList:
+
 	def __init__(self, *values):
 		self.head = None
 	

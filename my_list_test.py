@@ -4,7 +4,8 @@ from my_list import MyList
 class TestMyList(unittest.TestCase):
 
 	def test_size(self):
-		return
+		list = MyList(1, 2, 3, 4)
+		self.assertEqual(list.size(), 4)
 	
 	def test_clear(self):
 		return
