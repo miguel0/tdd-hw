@@ -30,10 +30,13 @@ class TestMyList(unittest.TestCase):
 	def test_getIndexOf(self):
 		list = MyList(1, 2, 3, 4)
 		self.assertEqual(list.getIndexOf(3), 2)
-		self.assertIs(list.getIndexOf(6), -1)
+		self.assertEqual(list.getIndexOf(6), -1)
 	
 	def test_remove(self):
-		return
+		list = MyList(1, 2, 3, 4)
+		self.assertEqual(list.remove(3), 4)
+		self.assertIs(list.remove(6), None)
+		self.assertEqual(list.size(), 3)
 
 if __name__ == '__main__':
 	unittest.main()
