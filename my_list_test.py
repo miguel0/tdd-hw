@@ -18,7 +18,9 @@ class TestMyList(unittest.TestCase):
 		self.assertEqual(list.size(), 8)
 	
 	def test_exists(self):
-		return
+		list = MyList(1, 2, 3, 4)
+		self.assertTrue(list.exists(2), True)
+		self.assertFalse(list.exists(8), False)
 	
 	def test_getAt(self):
 		return
