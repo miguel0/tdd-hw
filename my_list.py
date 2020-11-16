@@ -60,9 +60,9 @@ class MyList:
 			if current.value == value:
 				return True
 			current = current.next
-		else:
-			if current.value == value:
-				return True
+			
+		if current.value == value:
+			return True
 		
 		return False
 	
@@ -77,8 +77,8 @@ class MyList:
 			if current.next is None:
 				return None
 			current = current.next
-		else:
-			return current.value
+		
+		return current.value
 	
 	def get(self, value):
 		return None
