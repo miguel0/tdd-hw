@@ -18,7 +18,16 @@ class MyList:
 				current = temp
 	
 	def size(self):
-		return None
+		if self.head is None:
+			return 0
+		
+		size = 1
+		current = self.head
+		while current.next is not None:
+			size += 1
+			current = current.next
+
+		return size
 	
 	def clear(self):
 		return None

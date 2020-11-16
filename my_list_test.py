@@ -6,6 +6,7 @@ class TestMyList(unittest.TestCase):
 	def test_size(self):
 		list = MyList(1, 2, 3, 4)
 		self.assertEqual(list.size(), 4)
+		self.assertNotEqual(list.size(), 8)
 	
 	def test_clear(self):
 		return
