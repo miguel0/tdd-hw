@@ -81,7 +81,21 @@ class MyList:
 		return current.value
 	
 	def getIndexOf(self, value):
-		return None
+		if self.head is None:
+			return -1
+		
+		index = 0
+		current = self.head
+		while current.next is not None:
+			if current.value == value:
+				return index
+			current = current.next
+			index += 1
+
+		if current.value == value:
+			return index
+		
+		return -1
 	
 	def remove(self, index):
 		return None
