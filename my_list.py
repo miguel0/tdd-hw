@@ -98,4 +98,23 @@ class MyList:
 		return -1
 	
 	def remove(self, index):
-		return None
+		if index < 0:
+			return None
+		elif self.head is None:
+			return None
+		elif index == 0:
+			temp = self.head.value
+			self.head = self.head.next
+			return temp
+		elif self.head.next is None:
+			return None
+		
+		current = self.head
+		for i in range(index - 1):
+			if current.next.next is None:
+				return None
+			current = current.next
+		
+		temp = current.next.value
+		current.next = current.next.next
+		return temp
