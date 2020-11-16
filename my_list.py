@@ -30,7 +30,7 @@ class MyList:
 		return size
 	
 	def clear(self):
-		return None
+		self.head = None
 	
 	def add(self, *values):
 		return None
