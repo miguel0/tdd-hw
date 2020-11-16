@@ -52,7 +52,19 @@ class MyList:
 			current = temp
 	
 	def exists(self, value):
-		return None
+		if self.head is None:
+			return False
+		
+		current = self.head
+		while current.next is not None:
+			if current.value == value:
+				return True
+			current = current.next
+		else:
+			if current.value == value:
+				return True
+		
+		return False
 	
 	def getAt(self, index):
 		return None
