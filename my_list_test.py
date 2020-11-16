@@ -22,17 +22,17 @@ class TestMyList(unittest.TestCase):
 		self.assertTrue(list.exists(2), True)
 		self.assertFalse(list.exists(8), False)
 	
-	def test_getAt(self):
+	def test_get_at(self):
 		list = MyList(1, 2, 3, 4)
-		self.assertEqual(list.getAt(3), 4)
-		self.assertIs(list.getAt(6), None)
+		self.assertEqual(list.get_at(3), 4)
+		self.assertIs(list.get_at(6), None)
 		with self.assertRaises(TypeError):
-			list.getAt('not an int')
+			list.get_at('not an int')
 	
-	def test_getIndexOf(self):
+	def test_get_index_of(self):
 		list = MyList(1, 2, 3, 4)
-		self.assertEqual(list.getIndexOf(3), 2)
-		self.assertEqual(list.getIndexOf(6), -1)
+		self.assertEqual(list.get_index_of(3), 2)
+		self.assertEqual(list.get_index_of(6), -1)
 	
 	def test_remove(self):
 		list = MyList(1, 2, 3, 4)

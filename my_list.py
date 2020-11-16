@@ -66,7 +66,7 @@ class MyList:
 		
 		return False
 	
-	def getAt(self, index):
+	def get_at(self, index):
 		if not isinstance(index, int):
 			raise TypeError('The index must be an integer')
 		elif index < 0:
@@ -82,7 +82,7 @@ class MyList:
 		
 		return current.value
 	
-	def getIndexOf(self, value):
+	def get_index_of(self, value):
 		if self.head is None:
 			return -1
 		
