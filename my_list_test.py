@@ -26,6 +26,8 @@ class TestMyList(unittest.TestCase):
 		list = MyList(1, 2, 3, 4)
 		self.assertEqual(list.getAt(3), 4)
 		self.assertIs(list.getAt(6), None)
+		with self.assertRaises(TypeError):
+			list.getAt('not an int')
 	
 	def test_getIndexOf(self):
 		list = MyList(1, 2, 3, 4)
@@ -37,6 +39,8 @@ class TestMyList(unittest.TestCase):
 		self.assertEqual(list.remove(3), 4)
 		self.assertIs(list.remove(6), None)
 		self.assertEqual(list.size(), 3)
+		with self.assertRaises(TypeError):
+			list.remove('not an int')
 
 if __name__ == '__main__':
 	unittest.main()
