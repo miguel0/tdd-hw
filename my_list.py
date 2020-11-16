@@ -7,7 +7,15 @@ class MyNode:
 class MyList:
 
 	def __init__(self, *values):
-		self.head = None
+		if len(values) == 0:
+			self.head = None
+		else:
+			self.head = MyNode(values[0])
+			current = self.head
+			for value in values[1:]:
+				temp = MyNode(value)
+				current.next = temp
+				current = temp
 	
 	def size(self):
 		return None
