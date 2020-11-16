@@ -67,7 +67,9 @@ class MyList:
 		return False
 	
 	def getAt(self, index):
-		if index < 0:
+		if not isinstance(index, int):
+			raise TypeError('The index must be an integer')
+		elif index < 0:
 			return None
 		elif self.head is None:
 			return None
@@ -98,7 +100,9 @@ class MyList:
 		return -1
 	
 	def remove(self, index):
-		if index < 0:
+		if not isinstance(index, int):
+			raise TypeError('The index must be an integer')		
+		elif index < 0:
 			return None
 		elif self.head is None:
 			return None
