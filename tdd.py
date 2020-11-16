@@ -1,3 +1,5 @@
+import unittest
+
 class Node:
 	def __init__(self, value):
 		self.value = value
@@ -27,3 +29,6 @@ class List:
 	
 	def remove(self, index):
 		return None
+
+if __name__ == '__main__':
+	unittest.main()
