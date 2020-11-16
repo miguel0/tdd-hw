@@ -27,7 +27,7 @@ class TestMyList(unittest.TestCase):
 		self.assertEqual(list.getAt(3), 4)
 		self.assertIs(list.getAt(6), None)
 	
-	def test_get(self):
+	def test_getIndexOf(self):
 		return
 	
 	def test_remove(self):

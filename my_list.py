@@ -60,7 +60,7 @@ class MyList:
 			if current.value == value:
 				return True
 			current = current.next
-			
+
 		if current.value == value:
 			return True
 		
@@ -80,7 +80,7 @@ class MyList:
 		
 		return current.value
 	
-	def get(self, value):
+	def getIndexOf(self, value):
 		return None
 	
 	def remove(self, index):
